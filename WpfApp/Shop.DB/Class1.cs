@@ -24,7 +24,7 @@ namespace Shop.DB
             // Add Record
             using (mySession.BeginTransaction())
             {
-                Entities.Users loContact = new Entities.Users { FirstName = "John", LastName = "Doe", isAdmin = true};
+                Entities.User loContact = new Entities.User { FirstName = "John", LastName = "Doe", IsAdmin = true};
                 mySession.Save(loContact);
 
                 mySession.Transaction.Commit();
