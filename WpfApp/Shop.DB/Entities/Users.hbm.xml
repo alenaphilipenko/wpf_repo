@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Shop.DB" namespace="Shop.DB.Entities">
+  <class name="Users" table="Users">
+    <id name="Id" type="int">
+      <generator class="Identity" />
+    </id>
+    <property name="FirstName" type="String" />
+    <property name="LastName" type="String" />
+    <property name="isAdmin" type="bool" />
+  </class>
+</hibernate-mapping>

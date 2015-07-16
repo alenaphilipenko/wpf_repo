@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop.DB
+namespace TestConsoleApplication
 {
-    public class Class1
+    class Program
     {
-        private Configuration myConfiguration;
-        private ISessionFactory mySessionFactory;
-        private ISession mySession;
-
-        public Class1()
+        static void Main(string[] args)
         {
+            Configuration myConfiguration;
+            ISessionFactory mySessionFactory;
+            ISession mySession;
+
             myConfiguration = new Configuration();
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
@@ -24,7 +24,7 @@ namespace Shop.DB
             // Add Record
             using (mySession.BeginTransaction())
             {
-                Entities.Users loContact = new Entities.Users { FirstName = "John", LastName = "Doe", isAdmin = true};
+                Shop.DB.Entities.Users loContact = new Shop.DB.Entities.Users { FirstName = "John", LastName = "Doe", isAdmin = true };
                 mySession.Save(loContact);
 
                 mySession.Transaction.Commit();
