@@ -61,11 +61,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Emailer.cs" />
+    <Compile Include="Entities\Phone.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Repositoties\BaseRepository.cs" />
+    <Compile Include="Repositoties\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config.xml" />
+    <EmbeddedResource Include="Mapping\Emails.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Products.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Phones.hbm.xml" />
     <Content Include="LocalDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -73,7 +82,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>LocalDatabase.mdf</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Entities\Users.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Users.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

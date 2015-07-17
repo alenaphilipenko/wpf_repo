@@ -24,8 +24,13 @@ namespace TestConsoleApplication
             // Add Record
             using (mySession.BeginTransaction())
             {
-                Shop.DB.Entities.User loContact = new Shop.DB.Entities.User { FirstName = "John", LastName = "Doe", IsAdmin = true };
+                Shop.DB.Entities.Emailer loContact = new Shop.DB.Entities.Emailer { Email = "john@mail.com", Owner=1, Type="home"};
+                Shop.DB.Entities.Phone loPhone = new Shop.DB.Entities.Phone { PhoneNumber = "567-89-00", Owner = 1, Type="home"};
+                Shop.DB.Entities.Product loProduct = new Shop.DB.Entities.Product { Manufacturer = "P&G", Name = "Shampoo", Price = 12 };
+
                 mySession.Save(loContact);
+                mySession.Save(loPhone);
+                mySession.Save(loProduct);
 
                 mySession.Transaction.Commit();
             }
