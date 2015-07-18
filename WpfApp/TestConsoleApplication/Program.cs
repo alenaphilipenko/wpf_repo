@@ -15,7 +15,7 @@ namespace TestConsoleApplication
             Configuration myConfiguration;
             ISessionFactory mySessionFactory;
             ISession mySession;
-
+            //
             myConfiguration = new Configuration();
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
