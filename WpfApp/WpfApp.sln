@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainWpfProj", "MainWpfProj\MainWpfProj.csproj", "{911EAA09-E0E9-44C5-A693-E4BA237434E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WpfProj", "MainWpfProj\Shop.WpfProj.csproj", "{911EAA09-E0E9-44C5-A693-E4BA237434E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.BL", "Shop.BL\Shop.BL.csproj", "{160DFBF2-949E-4E30-9811-2C169256FE1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WebApi.BL", "Shop.BL\Shop.WebApi.BL.csproj", "{160DFBF2-949E-4E30-9811-2C169256FE1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.DB", "Shop.DB\Shop.DB.csproj", "{367FF2A7-3EAC-431F-ACE9-72D7364D32A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WebApi.DAL", "Shop.DB\Shop.WebApi.DAL.csproj", "{367FF2A7-3EAC-431F-ACE9-72D7364D32A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Resources", "Shop.Resources\Shop.Resources.csproj", "{201DCA5C-9887-4AFC-9EEE-2B523B589AF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WpfResources", "Shop.Resources\Shop.WpfResources.csproj", "{201DCA5C-9887-4AFC-9EEE-2B523B589AF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApplication", "TestConsoleApplication\TestConsoleApplication.csproj", "{6DD4BF76-DDB1-40BC-BD5A-2AD8C65C8539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.WebApi", "Shop.WebApi\Shop.WebApi.csproj", "{D8D413AD-4B54-4D80-981F-A9DE9B2D88CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.DataTransferObjects", "Shop.DataTransferObjects\Shop.DataTransferObjects.csproj", "{16CF37EB-2E20-404D-8066-266751FE3D65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{6DD4BF76-DDB1-40BC-BD5A-2AD8C65C8539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DD4BF76-DDB1-40BC-BD5A-2AD8C65C8539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD4BF76-DDB1-40BC-BD5A-2AD8C65C8539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D413AD-4B54-4D80-981F-A9DE9B2D88CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D413AD-4B54-4D80-981F-A9DE9B2D88CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D413AD-4B54-4D80-981F-A9DE9B2D88CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D413AD-4B54-4D80-981F-A9DE9B2D88CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CF37EB-2E20-404D-8066-266751FE3D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CF37EB-2E20-404D-8066-266751FE3D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CF37EB-2E20-404D-8066-266751FE3D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CF37EB-2E20-404D-8066-266751FE3D65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

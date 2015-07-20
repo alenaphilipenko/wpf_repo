@@ -1,10 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Cfg;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Shop.DB.Entities;
 
 namespace TestConsoleApplication
 {
@@ -24,9 +20,9 @@ namespace TestConsoleApplication
             // Add Record
             using (mySession.BeginTransaction())
             {
-                Shop.DB.Entities.Emailer loContact = new Shop.DB.Entities.Emailer { Email = "john@mail.com", Owner=1, Type="home"};
-                Shop.DB.Entities.Phone loPhone = new Shop.DB.Entities.Phone { PhoneNumber = "567-89-00", Owner = 1, Type="home"};
-                Shop.DB.Entities.Product loProduct = new Shop.DB.Entities.Product { Manufacturer = "P&G", Name = "Shampoo", Price = 12 };
+                Emailer loContact = new Emailer { Email = "john@mail.com", Owner=1, Type="home"};
+                Phone loPhone = new Phone { PhoneNumber = "567-89-00", Owner = 1, Type="home"};
+                Product loProduct = new Product { Manufacturer = "P&G", Name = "Shampoo", Price = 12 };
 
                 mySession.Save(loContact);
                 mySession.Save(loPhone);

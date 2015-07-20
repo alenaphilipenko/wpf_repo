@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Shop.DB.Interfaces;
+﻿using NHibernate;
 using NHibernate.Cfg;
-using NHibernate;
+using Shop.DB.Interfaces;
 
 namespace Shop.DB.Repositoties
 {
     public class BaseRepository<T> where T : IEntity
     {
-        Configuration myConfiguration;
-        ISessionFactory mySessionFactory;
-        ISession mySession;
+        private Configuration myConfiguration;
+        private ISessionFactory mySessionFactory;
+        private ISession mySession;
 
         public BaseRepository()
         {
