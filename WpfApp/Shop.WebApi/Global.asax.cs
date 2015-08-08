@@ -5,6 +5,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Shop.WebApi.BL;
 using Shop.WebApi.DAL;
+using Shop.WpfProj;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 

@@ -1,0 +1,56 @@
+﻿<Window x:Class="Shop.WpfProj.View.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="400" Width="900">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <Style x:Key="style1" TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin" Value="15,15,10,10"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        
+        <Style TargetType="{x:Type }"></Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="LogIn">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource style1}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Text, ElementName=txtLogIn}" Value=""/>
+                                <Condition Binding="{Binding IsKeyboardFocused, ElementName=txtLogIn}" Value="False"/>
+                            </MultiDataTrigger.Conditions>
+                            <MultiDataTrigger.Setters>
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </MultiDataTrigger.Setters>
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock Style="{StaticResource style1}">Test</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="2" BorderThickness="2" Name ="txtLogIn" Background="Transparent"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="3" BorderThickness="2"></TextBox>
+    </Grid>
+    
+    
+    
+</Window>

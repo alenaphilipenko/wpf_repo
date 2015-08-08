@@ -254,6 +254,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MainWpfProj\Shop.WpfProj.csproj">
+      <Project>{911EAA09-E0E9-44C5-A693-E4BA237434E4}</Project>
+      <Name>Shop.WpfProj</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shop.BL\Shop.WebApi.BL.csproj">
       <Project>{160DFBF2-949E-4E30-9811-2C169256FE1A}</Project>
       <Name>Shop.WebApi.BL</Name>

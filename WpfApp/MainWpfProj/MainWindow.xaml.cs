@@ -11,5 +11,10 @@ namespace MainWpfProj
         {
             InitializeComponent();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            Test_lbl.Content = "Test Button works!";
+        }
     }
 }
