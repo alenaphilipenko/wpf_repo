@@ -20,10 +20,14 @@ namespace Shop.WpfProj.TestView
             ShowText = new RelayCommand(() =>
             {
                 Text = "Relay Command works";
-            }, () =>
-            {
-                return false;
-            });
+                Shop.WebApi ff = new Shop.WpfProj.Controllers.UsersController();
+                //ff.
+            }
+            //, () =>
+            //{
+            //    return false;
+            //}
+            );
         }
 
         public int Width
