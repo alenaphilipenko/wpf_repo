@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,13 +22,20 @@ namespace Shop.WpfProj.TestView
             ShowText = new RelayCommand(() =>
             {
                 Text = "Relay Command works";
-                Shop.WebApi ff = new Shop.WpfProj.Controllers.UsersController();
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("http://localhost:50393/");
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    HttpResponseMessage response = client.GetAsync("api/users/ReturnSquare/6").Result;
+                }
+                //Shop.WebApi ff = new Shop.WpfProj.Controllers.UsersController();
                 //ff.
             }
-            //, () =>
-            //{
-            //    return false;
-            //}
+                //, () =>
+                //{
+                //    return false;
+                //}
             );
         }
 
@@ -42,7 +51,7 @@ namespace Shop.WpfProj.TestView
             set
             {
                 text = value;
-                RaisePropertyChanged(()=>Text);
+                RaisePropertyChanged(() => Text);
             }
         }
 

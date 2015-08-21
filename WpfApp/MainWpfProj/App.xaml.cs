@@ -18,7 +18,7 @@ namespace MainWpfProj
             var container = new Container();
             WpfProjPackage.RegisterViewModels(container);
 
-            var mainWindow = container.GetInstance<Login>();
+            var mainWindow = container.GetInstance<TestWindow>();
 
             mainWindow.Show();
 
