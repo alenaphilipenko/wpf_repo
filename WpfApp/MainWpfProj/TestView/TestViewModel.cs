@@ -17,18 +17,13 @@ namespace Shop.WpfProj.TestView
         private int width = 25;
         private string text = "Test Button works!(default text)";
 
-        public TestViewModel()
+        public TestViewModel(IWebApiConnector connector)
         {
             ShowText = new RelayCommand(() =>
             {
                 Text = "Relay Command works";
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri("http://localhost:50393/");
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                    HttpResponseMessage response = client.GetAsync("api/users/ReturnSquare/6").Result;
-                }
+                var client = connector.CreateConnection();
+                HttpResponseMessage response = client.GetAsync("api/users/ReturnSquare/6").Result;
                 //Shop.WebApi ff = new Shop.WpfProj.Controllers.UsersController();
                 //ff.
             }

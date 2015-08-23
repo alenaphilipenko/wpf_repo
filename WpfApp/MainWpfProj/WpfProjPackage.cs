@@ -14,6 +14,7 @@ namespace Shop.WpfProj
         public static void RegisterViewModels(Container container)
         {
             container.Register<ITestViewModel, TestViewModel>();
+            container.Register<IWebApiConnector, WebApiConnector>();
         }
     }
 }

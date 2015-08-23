@@ -92,6 +92,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Interfaces\ITestViewModel.cs" />
+    <Compile Include="Interfaces\IWebApiConnector.cs" />
     <Compile Include="TestView\TestViewModel.cs" />
     <Compile Include="TestView\TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
@@ -101,6 +102,7 @@
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WebApiConnector.cs" />
     <Compile Include="WpfProjPackage.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
